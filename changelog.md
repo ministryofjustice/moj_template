@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.4.0 (2014-02-14)
+  * Add basic styles for .inner
+
 #### v0.3.0 (2014-02-14)
   * Add yield for custom analytics
 

@@ -1,4 +1,3 @@
-
 #content {
   margin: auto;
   max-width: 1020px;
@@ -18,5 +17,14 @@
   }
   body.beta & {
     border-color: $beta-colour;
+  }
+}
+
+.inner {
+  width: auto;
+  padding: 0 1em;
+
+  @include media(desktop) {
+    padding: 0 2em;
   }
 }
