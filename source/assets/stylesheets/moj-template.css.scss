@@ -7,12 +7,9 @@
 @import "css3";
 @import "shims";
 @import "design-patterns/buttons";
+@import "design-patterns/alpha-beta";
 
 // SHAME - files waiting to be removed
-@import "shame/alpha-beta";
-
-// MOJ Toolkit
-//@import "moj-base";
 
 // Core MOJ Styles
 @import "moj-core/moj-colours";
