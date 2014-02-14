@@ -99,6 +99,42 @@ Example usage:
 }
 
 */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
 header.page-header h1 {
   font-family: "nta", Arial, sans-serif;
   font-size: 48px;
@@ -139,8 +175,8 @@ header.page-header h1 {
         font-size: 18px;
         line-height: 1.11111; } }
   header.page-header h1 .alpha {
-    display: block;
-    float: left;
+    display: -moz-inline-stack;
+    display: inline-block;
     background-color: #d53880;
     color: #fff;
     font-family: "nta", Arial, sans-serif;
@@ -152,15 +188,15 @@ header.page-header h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    margin: 3px 10px 0 0;
+    margin: 3px 10px 0 5px;
     padding: 2px 5px 0; }
     @media (max-width: 640px) {
       header.page-header h1 .alpha {
         font-size: 14px;
         line-height: 1.14286; } }
   header.page-header h1 .beta {
-    display: block;
-    float: left;
+    display: -moz-inline-stack;
+    display: inline-block;
     background-color: #f47738;
     color: #fff;
     font-family: "nta", Arial, sans-serif;
@@ -172,7 +208,7 @@ header.page-header h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    margin: 3px 10px 0 0;
+    margin: 3px 10px 0 5px;
     padding: 2px 5px 0; }
     @media (max-width: 640px) {
       header.page-header h1 .beta {
@@ -268,8 +304,8 @@ body.beta .indicator {
     .service-header a.service-name:hover {
       border-bottom: 1px solid white; }
   body.alpha .service-header a.service-phase {
-    display: block;
-    float: left;
+    display: -moz-inline-stack;
+    display: inline-block;
     background-color: #d53880;
     color: #fff;
     font-family: "nta", Arial, sans-serif;
@@ -281,15 +317,15 @@ body.beta .indicator {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    margin: 3px 10px 0 0;
+    margin: 3px 10px 0 5px;
     padding: 2px 5px 0; }
     @media (max-width: 640px) {
       body.alpha .service-header a.service-phase {
         font-size: 14px;
         line-height: 1.14286; } }
   body.beta .service-header a.service-phase {
-    display: block;
-    float: left;
+    display: -moz-inline-stack;
+    display: inline-block;
     background-color: #f47738;
     color: #fff;
     font-family: "nta", Arial, sans-serif;
@@ -301,7 +337,7 @@ body.beta .indicator {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    margin: 3px 10px 0 0;
+    margin: 3px 10px 0 5px;
     padding: 2px 5px 0; }
     @media (max-width: 640px) {
       body.beta .service-header a.service-phase {
