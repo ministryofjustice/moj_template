@@ -1,0 +1,1 @@
+<%= content_for?(:body_classes) ? raw("#{yield(:body_classes)}") : "#{config_item(:phase).to_s.downcase} #{config_item(:product_type).to_s.downcase}" %>

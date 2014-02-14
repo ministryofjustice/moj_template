@@ -1,0 +1,30 @@
+.service-header {
+  float: left;
+  width: 66.6%;
+  margin: 7px 0 2px;
+
+  a.service-name {
+    @include core-24(1em);
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
+    float: left;
+    margin-top: 3px;
+
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  body.alpha & a.service-phase {
+    @include phase-tag(alpha);
+  }
+  body.beta & a.service-phase {
+    @include phase-tag(beta);
+  }
+  body.alpha & a.service-phase,
+  body.beta & a.service-phase {
+    margin-left: 1em;
+    text-decoration: none;
+  }
+}

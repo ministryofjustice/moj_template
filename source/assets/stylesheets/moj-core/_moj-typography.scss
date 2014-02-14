@@ -1,0 +1,42 @@
+// Set page-header styles
+header.page-header {
+  h1 {
+    @include heading-48;
+    font-weight: 700;
+    padding-top: 24px;
+    padding-bottom: 8px;
+
+    @include media(tablet) {
+      padding-top: 32px;
+      padding-bottom: 10px;
+    }
+    @include media(desktop) {
+      padding-top: 48px;
+      padding-bottom: 16px;
+    }
+
+    span {
+      @include core-27;
+      display: block;
+      color: #6f777b;
+    }
+
+    .alpha {
+      @include phase-tag(alpha);
+    }
+    .beta {
+      @include phase-tag(beta);
+    }
+    .alpha, .beta {
+      float: none;
+      display: inline;
+      vertical-align: middle;
+      margin-left: 1em;
+    }
+  }
+}
+
+// default heading weight - normal
+h2, h3, h4 {
+  font-weight: 400;
+}

@@ -1,0 +1,59 @@
+// Mainstream footer styles - Add to govuk toolkit as PR?
+#footer {
+  h2 {
+    @include bold-24;
+  }
+
+  .footer-categories {
+    font-size: 0;
+    float: left;
+    border: 1px solid #a1acb2;
+    border-width: 0 0 1px 0;
+    margin-bottom: 30px;
+    padding: 0 0 60px 0;
+    width: 100%;
+
+    ul {
+      @include core-16;
+      list-style: none;
+      border-top: 1px solid #a1acb2;
+      margin: 20px 0 0 0;
+      padding: 20px 0 0 0;
+      min-height: 210px;
+      vertical-align: top;
+
+      li {
+        display: block;
+        float: left;
+        clear: left;
+        margin: 0 0 15px 0;
+        width: 45.5%;
+
+        &:nth-child(even) {
+          float: right;
+          clear: none;
+        }
+      }
+    }
+  }
+
+  .footer-explore {
+    float: left;
+    margin-right: 7%;
+    width: 62%;
+  }
+
+  .footer-inside-government {
+    float: left;
+    width: 31%;
+
+    ul {
+      margin-right: 0;
+
+      li {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+}

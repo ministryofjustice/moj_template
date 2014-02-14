@@ -1,0 +1,11 @@
+<% if content_for?(:content_override) %>
+      <%= yield(:content_override) %>
+    <% else %>
+    <%= yield :before_content %>
+
+    <div id="wrapper" class="group">
+      <section id="content" role="main">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </section>
+    </div>
+    <% end %>

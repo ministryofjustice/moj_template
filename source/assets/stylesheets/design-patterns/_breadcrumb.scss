@@ -1,0 +1,37 @@
+#global-breadcrumb {
+  background-color: $white;
+  max-width: 1020px;
+  margin: 0 auto;
+  z-index: 50;
+
+  nav {
+    ol {
+      max-width: 960px;
+      margin: 0 30px;
+      padding: 0.75em 0;
+
+      li {
+        @include core-16;
+        background: url(https://assets.digital.cabinet-office.gov.uk/static/separator-73822610794bc3a64871f144d93d6526.png) 100% 50% no-repeat;
+        float: left;
+        list-style: none;
+        margin-left: 0;
+        margin-right: 0.5em;
+        padding-right: 1em;
+
+        &:last-child {
+          background-image: none;
+          margin-right: 0;
+        }
+
+        a {
+          color: $black;
+
+          &:hover {
+            color: $link-hover-colour;
+          }
+        }
+      }
+    }
+  }
+}
