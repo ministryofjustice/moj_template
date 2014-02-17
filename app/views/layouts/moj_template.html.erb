@@ -104,7 +104,7 @@
 
     <div class="indicator cf">
       <p>
-        <strong><%= config_item(:phase) %>:</strong>
+        <strong><%= config_item(:phase).to_s.capitalize %>:</strong>
         This is a new service -
         <% if content_for?(:feedback_link) %>
           <%= yield(:feedback_link) %>
