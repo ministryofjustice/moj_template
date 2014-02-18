@@ -11,8 +11,7 @@ task :compile do
 end
 
 desc "Build all versions"
-# task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid"]
-task :build => ["build:gem"]
+task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid"]
 
 namespace :build do
   desc "Build moj_template-#{MojTemplate::VERSION}.gem into the pkg directory"
@@ -59,26 +58,15 @@ namespace :build do
 
   desc "Build and release gem to gemfury if version has been updated"
   task :and_release_if_updated => :build do
-    # p = GemPublisher::Publisher.new('moj_template.gemspec')
-    # puts p.version_released?
-    # p.pusher.push("pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems)
-    # p = GemPublisher.publish_if_updated("moj_template.gemspec", :rubygems)
-    # if p
-    #   puts "Published #{g}"
-    # else
-    #   puts "moj_template-#{MojTemplate::VERSION} already released. Not pushing."
-    # end
-
-
-    # p = GemPublisher::Publisher.new('moj_template.gemspec')
-    # if p.version_released?
-    #   puts "moj_template-#{MojTemplate::VERSION} already released.  Not pushing."
-    # else
-      # puts "Pushing moj_template-#{MojTemplate::VERSION} to rubygems"
-      # p.pusher.push "pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems
-      # p.git_remote.add_tag "v#{MojTemplate::VERSION}"
-      # puts "Done."
-    # end
+    p = GemPublisher::Publisher.new('moj_template.gemspec')
+    if p.version_released?
+      puts "moj_template-#{MojTemplate::VERSION} already released.  Not pushing."
+    else
+      puts "Pushing moj_template-#{MojTemplate::VERSION} to rubygems"
+      p.pusher.push "pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems
+      p.git_remote.add_tag "v#{MojTemplate::VERSION}"
+      puts "Done."
+    end
 
   #   require 'publisher/play_publisher'
   #   q = Publisher::PlayPublisher.new
@@ -96,7 +84,7 @@ namespace :build do
   #   else
   #     puts "Pushing moj_template_mustache #{MojTemplate::VERSION} to git repo"
   #     q.publish
-    # end
+  #   end
   end
 end
 
