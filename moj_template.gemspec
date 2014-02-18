@@ -26,5 +26,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sass', '3.2.9'
   s.add_development_dependency 'govuk_template', '0.6.0'
   s.add_development_dependency 'govuk_frontend_toolkit', '0.43.0'
-  s.add_development_dependency 'gem_publisher', '1.3.0'
+  s.add_development_dependency 'gem_publisher', '1.3.1'
 end
