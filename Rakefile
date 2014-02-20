@@ -11,7 +11,7 @@ task :compile do
 end
 
 desc "Build all versions"
-task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid"]
+task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid", "build:django"]
 
 namespace :build do
   desc "Build moj_template-#{MojTemplate::VERSION}.gem into the pkg directory"
@@ -56,15 +56,32 @@ namespace :build do
     Packager::LiquidPackager.build
   end
 
+  desc "Build django_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  task :django => :compile do
+    puts "Building ./pkg/django_moj_template-#{MojTemplate::VERSION}"
+    require 'packager/django_packager'
+    Packager::DjangoPackager.build
+  end
+
   desc "Build and release gem to gemfury if version has been updated"
   task :and_release_if_updated => :build do
     p = GemPublisher::Publisher.new('moj_template.gemspec')
     if p.version_released?
-      puts "moj_template-#{MojTemplate::VERSION} already released.  Not pushing."
+      puts "moj_template-#{MojTemplate::VERSION} already released. Not pushing."
     else
       puts "Pushing moj_template-#{MojTemplate::VERSION} to rubygems"
       p.pusher.push "pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems
       p.git_remote.add_tag "v#{MojTemplate::VERSION}"
+      puts "Done."
+    end
+
+    require 'publisher/django_publisher'
+    q = Publisher::DjangoPublisher.new
+    if q.version_released?
+      puts "django_moj_template-#{MojTemplate::VERSION} already released. Not pushing."
+    else
+      puts "Publishing django_moj_template-#{MojTemplate::VERSION}..."
+      q.publish
       puts "Done."
     end
 

@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.0 (2014-02-20)
+  * Add Django Package version
+
 #### v0.4.3 (2014-02-18)
   * Add ability to auto publish gem to Rubygems using rake task
 
