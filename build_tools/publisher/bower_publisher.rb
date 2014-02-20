@@ -3,7 +3,7 @@ require 'tmpdir'
 require 'open3'
 
 module Publisher
-  class MustachePublisher
+  class BowerPublisher
     GIT_URL = "git@github.com:ministryofjustice/moj_template_bower"
 
     def initialize(version = MojTemplate::VERSION)
@@ -19,7 +19,7 @@ module Publisher
           run "ls -1 | grep -v 'README.md' | xargs -I {} rm -rf {}"
           run "cp -r #{@source_dir.to_s.shellescape}/* ."
           run "git add -A ."
-          run "git commit -q -m 'deploying MOJ Mustache templates #{@version}'"
+          run "git commit -q -m 'deploying MOJ Template #{@version}'"
           run "git tag v#{@version}"
           run "git push --tags origin master"
           run "npm publish ./"
