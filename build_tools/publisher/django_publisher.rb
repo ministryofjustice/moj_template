@@ -4,32 +4,21 @@ require 'open3'
 
 module Publisher
   class DjangoPublisher
-    GIT_URL = "git@github.com:ministryofjustice/moj_template_mustache"
-
     def initialize(version = MojTemplate::VERSION)
       @version = version
       @repo_root = Pathname.new(File.expand_path('../../..', __FILE__))
-      @source_dir = @repo_root.join('pkg', "mustache_moj_template-#{@version}")
+      @source_dir = @repo_root.join('pkg', "django_moj_template-#{@version}")
     end
 
     def publish
-      Dir.mktmpdir("moj_template_mustache") do |dir|
-        run "git clone -q #{GIT_URL.shellescape} #{dir.shellescape}"
-        Dir.chdir(dir) do
-          run "ls -1 | grep -v 'README.md' | xargs -I {} rm -rf {}"
-          run "cp -r #{@source_dir.to_s.shellescape}/* ."
-          run "git add -A ."
-          run "git commit -q -m 'deploying MOJ Mustache templates #{@version}'"
-          run "git tag v#{@version}"
-          run "git push --tags origin master"
-          run "npm publish ./"
-        end
+      Dir.chdir(@source_dir) do
+        puts run "python setup.py register"
       end
     end
 
     def version_released?
-      output = run("git ls-remote --tags #{GIT_URL.shellescape}")
-      return !! output.match(/v#{@version}/)
+      output = run('curl "https://pypi.crate.io/simple/moj_template/"')
+      return !! output.match(/moj_template-#{@version}/)
     end
 
     private
