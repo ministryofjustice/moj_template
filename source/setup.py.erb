@@ -5,20 +5,12 @@ from setuptools import setup, find_packages
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
-# README is required for distribution, but README.md is required for github,
-#   so create README temporarily
-README_SRC = os.path.join(ROOT_DIR, 'README.md')
-os.system('cp %s %s' % (README_SRC, os.path.join(ROOT_DIR, 'README.txt')))
-
-with open(README_SRC, 'r') as f:
-  readme_text = f.read()
-
 sdict = dict(
   name = 'moj_template',
   packages = find_packages(),
   version = '<%=MojTemplate::VERSION%>',
   description = 'A base template for MOJ Services.',
-  long_description = readme_text,
+  long_description = '',
   url = 'https://github.com/mattsnider/django-html5-boilerplate',
   author = 'MOJ Digital Services',
   author_email = 'dom.smith@digital.justice.gov.uk',
@@ -45,6 +37,3 @@ sdict = dict(
 
 from distutils.core import setup
 setup(**sdict)
-
-# cleanup README
-os.remove('%s/README.txt' % ROOT_DIR)

@@ -75,6 +75,14 @@ namespace :build do
       puts "Done."
     end
 
+    require 'publisher/django_publisher'
+    q = Publisher::DjangoPublisher.new
+    if q.version_released?
+      puts "moj_template_django #{MojTemplate::VERSION} already released. Not pushing."
+    else
+      
+    end
+
   #   require 'publisher/play_publisher'
   #   q = Publisher::PlayPublisher.new
   #   if q.version_released?
