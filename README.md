@@ -118,6 +118,17 @@ To generate the folder of Liquid templates run `bundle exec rake build:liquid`. 
 
 To generate the tarball, run the `bundle exec rake build:tar` rake task. This will produce a tarball in the `pkg` directory.
 
+## Publishing
+
+After an accepted contribution (pull request merged into master) you must checkout master and run the following command to publish the current versions:
+
+    bundle exec rake publish
+
+This will trigger a build and on success publish the following packages:
+
+* [A gem on RubyGems.org](https://rubygems.org/gems/moj_template)
+* [A Django python package](https://pypi.python.org/pypi/django-moj-template)
+
 ## Development
 
 The source files are in the `/source` directory.  The `compile` rake task builds the `/app` contents from these sources.  This process involves the following:
