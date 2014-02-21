@@ -122,7 +122,7 @@ To generate the tarball, run the `bundle exec rake build:tar` rake task. This wi
 
 After an accepted contribution (pull request merged into master) you must checkout master and run the following command to publish the current versions:
 
-    bundle exec rake publish
+    bundle exec rake release
 
 This will trigger a build and on success publish the following packages:
 
