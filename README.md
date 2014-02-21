@@ -25,11 +25,11 @@ At present this generates 5 output formats:
 
 To use it, add this line to your application's Gemfile (change the tag to the version you would like to use):
 
-    gem 'moj_template', git: 'https://github.com/ministryofjustice/moj_template.git', tag: 'v0.1.0'
+    gem 'moj_template', '~> 0.1.0'
 
 And then execute:
 
-    $ bundle
+    bundle
 
 You can then use the `moj_template` layout in your app.  If you need to extend the layout you can use [nested layouts](http://guides.rubyonrails.org/layouts_and_rendering.html#using-nested-layouts).
 
@@ -56,21 +56,31 @@ In order for these files to work, you will need to set a number of variables in 
 
 ### Django version
 
-To use the django package, add it to your app using:
+To use the django package, add the following package to `requirements.txt`:
 
-    pip install moj_template
+    django-moj-template==0.1.0
 
-Then extend your base template from the moj_template using:
+Then run:
+
+    pip install -r requirements.txt
+
+Add `moj_template` to your `INSTALLED_APPS` in your `settings.py` file. Eg:
+
+  INSTALLED_APPS = (
+    ...
+    'moj_template',
+    ...
+  )
+
+Then to use the template in your application extend your base template from the `moj_template` using:
 
     {% extends 'moj_template/base.html' %}
 
 #### Django Config
 
-You will be required to set up some additional config to use the package. Add the following to your `TEMPLATE_CONTEXT_PROCESSORS`:
+You will be required to set up some additional config to use the package.
 
-    "{app_path}.apps.core.context_processors.globals"
-
-Then include the following in a new file called `apps/core/context_processors.py`:
+Create a new file called `{app_path}/context_processors.py` with the following contents:
 
     def globals(request):
       return {
@@ -81,6 +91,10 @@ Then include the following in a new file called `apps/core/context_processors.py
         'feedback_url': '', # Feedback URL (URL for feedback link in phase banner)
         'ga_id': '' # Google Analytics ID (Tracking ID for the service)
       }
+
+Then add the following to your `TEMPLATE_CONTEXT_PROCESSORS` in `settings.py`:
+
+    "{app_path}.context_processors.globals"
 
 ### Play version
 
@@ -103,6 +117,17 @@ To generate the folder of Liquid templates run `bundle exec rake build:liquid`. 
 ### Tarball version
 
 To generate the tarball, run the `bundle exec rake build:tar` rake task. This will produce a tarball in the `pkg` directory.
+
+## Publishing
+
+After an accepted contribution (pull request merged into master) you must checkout master and run the following command to publish the current versions:
+
+    bundle exec rake publish
+
+This will trigger a build and on success publish the following packages:
+
+* [A gem on RubyGems.org](https://rubygems.org/gems/moj_template)
+* [A Django python package](https://pypi.python.org/pypi/django-moj-template)
 
 ## Development
 

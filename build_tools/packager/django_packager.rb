@@ -39,12 +39,14 @@ module Packager
     end
 
     def generate_package_files
-      package_contents = ERB.new(File.read(File.join(@repo_root, "source", "setup.py.erb"))).result(binding)
-      File.open(File.join(@target_dir, "setup.py"), "w") do |f|
-        f.write package_contents
+      files = [@repo_root.join("source", "README.txt"), @repo_root.join("source", "MANIFEST.in"), @repo_root.join("LICENCE.txt")]
+      files.each do |f|
+        FileUtils.cp(f, @target_dir)
       end
       File.new(@target_dir.join("moj_template", "__init__.py"), "w").close
-      FileUtils.cp(@repo_root.join("source", "README.txt"), @target_dir)
+      File.open(File.join(@target_dir, "setup.py"), "w") do |f|
+        f.write ERB.new(File.read(File.join(@repo_root, "source", "setup.py.erb"))).result(binding)
+      end
     end
 
     private

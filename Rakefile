@@ -62,47 +62,47 @@ namespace :build do
     require 'packager/django_packager'
     Packager::DjangoPackager.build
   end
+end
 
-  desc "Build and release gem to gemfury if version has been updated"
-  task :and_release_if_updated => :build do
-    p = GemPublisher::Publisher.new('moj_template.gemspec')
-    if p.version_released?
-      puts "moj_template-#{MojTemplate::VERSION} already released. Not pushing."
-    else
-      puts "Pushing moj_template-#{MojTemplate::VERSION} to rubygems"
-      p.pusher.push "pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems
-      p.git_remote.add_tag "v#{MojTemplate::VERSION}"
-      puts "Done."
-    end
-
-    require 'publisher/django_publisher'
-    q = Publisher::DjangoPublisher.new
-    if q.version_released?
-      puts "django_moj_template-#{MojTemplate::VERSION} already released. Not pushing."
-    else
-      puts "Publishing django_moj_template-#{MojTemplate::VERSION}..."
-      q.publish
-      puts "Done."
-    end
-
-  #   require 'publisher/play_publisher'
-  #   q = Publisher::PlayPublisher.new
-  #   if q.version_released?
-  #     puts "moj_template_play #{MojTemplate::VERSION} already released. Not pushing."
-  #   else
-  #     puts "Pushing moj_template_play #{MojTemplate::VERSION} to git repo"
-  #     q.publish
-  #   end
-
-  #   require 'publisher/mustache_publisher'
-  #   q = Publisher::MustachePublisher.new
-  #   if q.version_released?
-  #     puts "moj_template_mustache #{MojTemplate::VERSION} already released. Not pushing."
-  #   else
-  #     puts "Pushing moj_template_mustache #{MojTemplate::VERSION} to git repo"
-  #     q.publish
-  #   end
+desc "Build and release gem to gemfury if version has been updated"
+task :release => :build do
+  p = GemPublisher::Publisher.new('moj_template.gemspec')
+  if p.version_released?
+    puts "moj_template-#{MojTemplate::VERSION} already released. Not pushing."
+  else
+    puts "Pushing moj_template-#{MojTemplate::VERSION} to rubygems"
+    p.pusher.push "pkg/moj_template-#{MojTemplate::VERSION}.gem", :rubygems
+    p.git_remote.add_tag "v#{MojTemplate::VERSION}"
+    puts "Done."
   end
+
+  require 'publisher/django_publisher'
+  q = Publisher::DjangoPublisher.new
+  if q.version_released?
+    puts "django_moj_template-#{MojTemplate::VERSION} already released. Not pushing."
+  else
+    puts "Publishing django_moj_template-#{MojTemplate::VERSION}..."
+    q.publish
+    puts "Done."
+  end
+
+#   require 'publisher/play_publisher'
+#   q = Publisher::PlayPublisher.new
+#   if q.version_released?
+#     puts "moj_template_play #{MojTemplate::VERSION} already released. Not pushing."
+#   else
+#     puts "Pushing moj_template_play #{MojTemplate::VERSION} to git repo"
+#     q.publish
+#   end
+
+#   require 'publisher/mustache_publisher'
+#   q = Publisher::MustachePublisher.new
+#   if q.version_released?
+#     puts "moj_template_mustache #{MojTemplate::VERSION} already released. Not pushing."
+#   else
+#     puts "Pushing moj_template_mustache #{MojTemplate::VERSION} to git repo"
+#     q.publish
+#   end
 end
 
 
