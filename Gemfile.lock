@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    moj_template (0.5.4)
+    moj_template (0.5.5)
       rails (>= 3.1)
 
 GEM
