@@ -12,7 +12,8 @@ module Publisher
 
     def publish
       Dir.chdir(@source_dir) do
-        puts run "python setup.py register"
+        run "python setup.py register"
+        run "python setup.py sdist upload"
       end
     end
 
