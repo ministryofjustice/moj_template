@@ -28,44 +28,44 @@ namespace :build do
     Packager::TarPackager.build
   end
 
-  desc "Build play_moj_template-#{MojTemplate::VERSION}.tgz into the pkg directory"
+  desc "Build moj_template-#{MojTemplate::VERSION}.play.tgz into the pkg directory"
   task :play => :compile do
-    puts "Building ./pkg/play_moj_template-#{MojTemplate::VERSION}.tgz"
+    puts "Building ./pkg/moj_template-#{MojTemplate::VERSION}.play.tgz"
     require 'packager/play_packager'
     Packager::PlayPackager.build
   end
 
-  desc "Build mustache_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  desc "Build moj_template-#{MojTemplate::VERSION}.mustache.tgz into the pkg directory"
   task :mustache => :compile do
-    puts "Building ./pkg/mustache_moj_template-#{MojTemplate::VERSION}"
+    puts "Building ./pkg/moj_template-#{MojTemplate::VERSION}.mustache.tgz"
     require 'packager/mustache_packager'
     Packager::MustachePackager.build
   end
 
-  desc "Build mustache_inheritance_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  desc "Build moj_template-#{MojTemplate::VERSION}.mustache_inheritance.tgz into the pkg directory"
   task :mustache_inheritance => :compile do
-    puts "Building ./pkg/mustache_inheritance_moj_template-#{MojTemplate::VERSION}"
+    puts "Building ./pkg/moj_template-#{MojTemplate::VERSION}.mustache_inheritance.tgz"
     require 'packager/mustache_inheritance_packager'
     Packager::MustacheInheritancePackager.build
   end
 
-  desc "Build liquid_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  desc "Build moj_template-#{MojTemplate::VERSION}.liquid.tgz into the pkg directory"
   task :liquid => :compile do
-    puts "Building ./pkg/liquid_moj_template-#{MojTemplate::VERSION}"
+    puts "Building ./pkg/moj_template-#{MojTemplate::VERSION}.liquid.tgz"
     require 'packager/liquid_packager'
     Packager::LiquidPackager.build
   end
 
-  desc "Build django_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  desc "Build moj_template-#{MojTemplate::VERSION}.django.tgz into the pkg directory"
   task :django => :compile do
-    puts "Building ./pkg/django_moj_template-#{MojTemplate::VERSION}"
+    puts "Building ./pkg/moj_template-#{MojTemplate::VERSION}.django.tgz"
     require 'packager/django_packager'
     Packager::DjangoPackager.build
   end
 end
 
 desc "Build and release gem to gemfury if version has been updated"
-task :release => :build do
+task :release do
   p = GemPublisher::Publisher.new('moj_template.gemspec')
   if p.version_released?
     puts "moj_template-#{MojTemplate::VERSION} already released. Not pushing."
@@ -79,9 +79,9 @@ task :release => :build do
   require 'publisher/django_publisher'
   q = Publisher::DjangoPublisher.new
   if q.version_released?
-    puts "django_moj_template-#{MojTemplate::VERSION} already released. Not pushing."
+    puts "moj_template-#{MojTemplate::VERSION}.django already released. Not pushing."
   else
-    puts "Publishing django_moj_template-#{MojTemplate::VERSION}..."
+    puts "Publishing moj_template-#{MojTemplate::VERSION}.django to pypi"
     q.publish
     puts "Done."
   end

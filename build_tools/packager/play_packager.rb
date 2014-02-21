@@ -7,17 +7,7 @@ module Packager
   class PlayPackager < TarPackager
     def initialize
       super
-      @base_name = "play_moj_template-#{MojTemplate::VERSION}"
-    end
-
-    def build
-      @target_dir = @repo_root.join('pkg', @base_name)
-      @target_dir.rmtree if @target_dir.exist?
-      @target_dir.mkpath
-      Dir.chdir(@target_dir) do |dir|
-        prepare_contents
-        create_tarball
-      end
+      @base_name = "moj_template-#{MojTemplate::VERSION}.play"
     end
 
     def process_template(file)

@@ -7,7 +7,7 @@ module Packager
   class LiquidPackager < TarPackager
     def initialize
       super
-      @base_name = "liquid_moj_template-#{MojTemplate::VERSION}"
+      @base_name = "moj_template-#{MojTemplate::VERSION}.liquid"
     end
 
     def process_template(file)

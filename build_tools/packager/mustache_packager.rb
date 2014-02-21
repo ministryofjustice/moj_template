@@ -7,16 +7,16 @@ module Packager
   class MustachePackager < TarPackager
     def initialize
       super
-      @base_name = "mustache_moj_template-#{MojTemplate::VERSION}"
+      @base_name = "moj_template-#{MojTemplate::VERSION}.mustache"
     end
 
     def build
-      @target_dir = @repo_root.join('pkg', @base_name)
-      @target_dir.rmtree if @target_dir.exist?
-      @target_dir.mkpath
-      Dir.chdir(@target_dir) do |dir|
+      Dir.mktmpdir("moj_template") do |dir|
+        @target_dir = Pathname.new(dir).join(@base_name)
+        @target_dir.mkpath
         generate_package_json
         prepare_contents
+        create_tarball
       end
     end
 

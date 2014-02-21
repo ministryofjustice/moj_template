@@ -8,17 +8,17 @@ module Packager
   class DjangoPackager < TarPackager
     def initialize
       super
-      @base_name = "django_moj_template-#{MojTemplate::VERSION}"
+      @base_name = "moj_template-#{MojTemplate::VERSION}.django"
     end
 
     def build
-      @target_dir = @repo_root.join('pkg', @base_name)
-      @target_dir.rmtree if @target_dir.exist?
-      @target_dir.mkpath
-      Dir.chdir(@target_dir) do |dir|
+      Dir.mktmpdir("moj_template") do |dir|
+        @target_dir = Pathname.new(dir).join(@base_name)
+        @target_dir.mkpath
         prepare_contents
         parse_folders
         generate_package_files
+        create_tarball
       end
     end
 
