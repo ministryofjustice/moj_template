@@ -18,8 +18,8 @@ module Publisher
     end
 
     def version_released?
-      output = run('curl "https://pypi.crate.io/simple/moj_template/"')
-      return !! output.match(/moj_template-#{@version}/)
+      output = run('curl "https://pypi.python.org/simple/django-moj-template/"')
+      return !! output.match(/django-moj-template-#{@version}/)
     end
 
     private
