@@ -7,7 +7,7 @@ module Packager
   class MustacheInheritancePackager < TarPackager
     def initialize
       super
-      @base_name = "mustache_inheritance_moj_template-#{MojTemplate::VERSION}"
+      @base_name = "moj_template-#{MojTemplate::VERSION}.mustache_inheritance"
     end
 
     def process_template(file)
