@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.3 (2014-02-21)
+  * Change path for version checking on python package publishing
+
 #### v0.5.2 (2014-02-21)
   * Fix auto publish for django template
 
