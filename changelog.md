@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.7 (2014-03-03)
+  * Remove the `app` folder from repository. No longer needed as gem is on rubygems.org
+
 #### v0.5.6 (2014-02-26)
   * Remove GOV.UK mainsteam footer links
   * Correct built by to MOJ
@@ -17,9 +20,6 @@ A list of basic changes associated with each version. Versions are updated using
 
 #### v0.5.2 (2014-02-21)
   * Fix auto publish for django template
-
-#### v0.5.1 (2014-02-20)
-  * Correct URL for Python package file
 
 #### v0.5.1 (2014-02-20)
   * Correct URL for Python package file
