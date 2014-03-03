@@ -2,6 +2,10 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.6 (2014-02-26)
+  * Remove GOV.UK mainsteam footer links
+  * Correct built by to MOJ
+
 #### v0.5.5 (2014-02-21)
   * Correct publish rake command
 
