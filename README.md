@@ -14,16 +14,16 @@ The Ruby language (1.9.3+), the build tool [Rake](http://rake.rubyforge.org/) & 
 
 At present this generates 5 output formats:
 
-1. a gem containing a Rails engine
-2. a tarball containing Play Framework templates
-3. a folder containing Mustache templates
-4. a tarball containing Mustache Inheritance templates
-5. a tarball
-6. a django python package
+1. [a gem containing a Rails engine](#gem-version)
+2. [a tarball containing Play Framework templates](#play-version)
+3. [a folder containing Mustache templates](#mustache-version)
+4. [a tarball containing Mustache Inheritance templates](#mustache-inheritance-version)
+5. [a tarball](#tarball-version)
+6. [a django python package](#django-version)
 
 ### Gem version
 
-To use it, add this line to your application's Gemfile (change the tag to the version you would like to use):
+The gem is available on [rubygems.org](https://rubygems.org/gems/moj_template). To use it, add this line to your application's Gemfile (change the tag to the version you would like to use):
 
     gem 'moj_template', '~> 0.1.0'
 
@@ -56,7 +56,7 @@ In order for these files to work, you will need to set a number of variables in 
 
 ### Django version
 
-To use the django package, add the following package to `requirements.txt`:
+The Django package is available on [pypi.python.org](https://pypi.python.org/pypi/django-moj-template). To use the django package, add the following package to `requirements.txt`:
 
     django-moj-template==0.1.0
 

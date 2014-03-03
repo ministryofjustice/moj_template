@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.8 (2014-03-03)
+  * Update readme instructions
+
 #### v0.5.7 (2014-03-03)
   * Remove the `app` folder from repository. No longer needed as gem is on rubygems.org
 
