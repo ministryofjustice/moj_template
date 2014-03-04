@@ -1,3 +1,3 @@
 module MojTemplate
-  VERSION = "0.5.8"
+  VERSION = "0.5.9"
 end

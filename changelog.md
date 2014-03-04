@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.5.9 (2014-03-04)
+  * Remove Gemfile.lock from repo to reduce conflicts
+
 #### v0.5.8 (2014-03-03)
   * Update readme instructions
 
