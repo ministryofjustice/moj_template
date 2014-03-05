@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.7.0 (2014-03-05)
+  * Update MOJ Blog URL
+
 #### v0.6.1 (2014-03-05)
   * Fix broken changelog link in readme
 
