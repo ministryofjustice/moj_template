@@ -4,7 +4,7 @@ This repository is intended to provide a consistent starting point for Ministry 
 
 ------
 
-[View Changelog](https://github.com/ministryofjustice/moj_template/blob/master/changelog.md)
+[View Changelog](https://github.com/ministryofjustice/moj_template/blob/master/CHANGELOG.md)
 
 ## Requirements
 
