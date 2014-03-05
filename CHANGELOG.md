@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.6.1 (2014-03-05)
+  * Fix broken changelog link in readme
+
 #### v0.6.0 (2014-03-05)
   * Add initial set of tests for mustache version
 
