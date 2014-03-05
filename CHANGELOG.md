@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.6.0 (2014-03-05)
+  * Add initial set of tests for mustache version
+
 #### v0.5.9 (2014-03-04)
   * Remove Gemfile.lock from repo to reduce conflicts
 
