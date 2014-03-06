@@ -111,12 +111,14 @@ module Compiler
           files << file
         end
 
-        if on_darwin?
-          output, status = Open3.capture2e("rsync -R #{files.shelljoin} #{@build_dir.join('assets').to_s.shellescape}")
-        else
-          output, status = Open3.capture2e("cp -r --parents #{files.shelljoin} #{@build_dir.join('assets').to_s.shellescape}")
+        unless files.empty?
+          if on_darwin?
+            output, status = Open3.capture2e("rsync -R #{files.shelljoin} #{@build_dir.join('assets').to_s.shellescape}")
+          else
+            output, status = Open3.capture2e("cp -r --parents #{files.shelljoin} #{@build_dir.join('assets').to_s.shellescape}")
+          end
+          abort "Error copying files:\n#{output}" if status.exitstatus > 0
         end
-        abort "Error copying files:\n#{output}" if status.exitstatus > 0
 
         # Strip leading path component to get logical path as referenced in stylesheets
         @static_assets = files.map {|f| f.sub(%r{\A[^/]+/}, '') }
@@ -165,7 +167,9 @@ module Compiler
 
     def prepare_build_dir
       @build_dir.rmtree if @build_dir.exist?
+
       @build_dir.mkpath
+      @build_dir.join('assets').mkpath
       @build_dir.join('assets', 'stylesheets').mkpath
       @build_dir.join('assets', 'stylesheets', 'images').mkpath
       @build_dir.join('assets', 'stylesheets', 'fonts').mkpath
