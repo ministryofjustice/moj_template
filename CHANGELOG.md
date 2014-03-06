@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.8.0 (2014-03-06)
+  * Add automated tests using Travis CI
+
 #### v0.7.0 (2014-03-05)
   * Update MOJ Blog URL
 
