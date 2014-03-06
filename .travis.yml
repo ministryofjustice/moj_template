@@ -6,5 +6,10 @@ notifications:
       secure: TqNWeWCexwfDYni1dFZy8NHdFCdBB9xpD3d/mPFjJj5DoDMuDzJYcsp6t4Iv0ICLCg4SiLLgxg6d22K9EdLvaqVzNNiGG5goYvUiv9pjDyEzSl+usX0ABr7IHB7ukmPPPUWKeQ7IY6bsMkKpb2PRVP82Eq1WFA4zsaGJhrmWAzw=
     format: html
     template: 'Build <a href="%{build_url}">#%{build_number}</a> for <a href="https://github.com/%{repository}/tree/%{branch}">%{branch}</a> of <a href="https://github.com/%{repository}">%{repository}</a> %{result} in %{duration}. (<a href="%{compare_url}">changes</a>)'
+before_script:
+  - bash travis.sh
 after_success:
   - bundle exec rake release
+env:
+  global:
+    secure: ddCSImaFoTzT1l3M1jpg2Bd5UD/Q6AHT18aERSwzEb8dK6T16RlWhP56XmJNrE9/5W0EtaYFXaEQQYCNYLO+xVlHEejdHY9oPVB3ODd7l2c2TqT8Nih/87l4cabNqo0JV27i62ZndylBRi8SHwjkjOf08JEIB6hWyJA40WX0u1M=
