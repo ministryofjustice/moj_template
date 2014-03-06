@@ -1,6 +1,8 @@
 language: ruby
 rvm: 2.0.0
-before_script:
-  - bundle exec rake compile
 notifications:
-  email: false
+  hipchat:
+    rooms:
+      secure: TqNWeWCexwfDYni1dFZy8NHdFCdBB9xpD3d/mPFjJj5DoDMuDzJYcsp6t4Iv0ICLCg4SiLLgxg6d22K9EdLvaqVzNNiGG5goYvUiv9pjDyEzSl+usX0ABr7IHB7ukmPPPUWKeQ7IY6bsMkKpb2PRVP82Eq1WFA4zsaGJhrmWAzw=
+    format: html
+    template: 'Build <a href="%{build_url}">#%{build_number}</a> for <a href="https://github.com/%{repository}/tree/%{branch}">%{branch}</a> of <a href="https://github.com/%{repository}">%{repository}</a> %{result} in %{duration}. (<a href="%{compare_url}">changes</a>)'
