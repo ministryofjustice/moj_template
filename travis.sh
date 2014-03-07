@@ -16,7 +16,7 @@ echo "index-servers =" >> ~/.pypirc
 echo "    pypi" >> ~/.pypirc
 echo "" >> ~/.pypirc
 echo "[pypi]" >> ~/.pypirc
-echo "username:$PYPI_USER" >> ~/.pypirc
+echo "username:ministryofjustice" >> ~/.pypirc
 echo "password:$PIPY_PASS" >> ~/.pypirc
 
 # Github
