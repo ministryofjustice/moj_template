@@ -20,5 +20,5 @@ echo "username:ministryofjustice" >> ~/.pypirc
 echo "password:$PIPY_PASS" >> ~/.pypirc
 
 # Github
-git config credential.helper "store --file=~/.git/credentials"
-echo "https://$GH_TOKEN:@github.com" > ~/.git/credentials
+git config credential.helper "store --file=.git/credentials"
+echo "https://$GH_TOKEN:@github.com" > .git/credentials
