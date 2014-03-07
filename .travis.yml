@@ -1,15 +1,18 @@
 language: ruby
 rvm: 2.0.0
+before_script: sh travis.sh
+after_success: bundle exec rake release
+env:
+  global:
+    secure: GB+tNpQsCDC99abMDzz++KZal2pgjFyKJgmHwRYm4a+uscJlUk/qIY7xf04pGg1DpsPrQjSSykAU+eDOe0Dj8gnftdzoa4WAdqeMEiAqrgEK81Pd5nGy0WgO2cM85lXGAhrBfzJrfEOAS3l1GzO8MyDgWsgtImaA6nCw3kOa8hk=
+    secure: bRpd2Bub8w5v6ciYU2NqwqHCBlV0stNbLQQIKyhlS8GoUXd1N8y7qRiTVUP8gVl1yXGNPWXYjYfNGbVC4Fxq4kRF+o0Ou0REYXBVF1d901urH0OILhuRdtCHUGa24gMrezJhGW377xbr0dYQgRG7nVqIjUnPWrw6Qm/0Hxfz9BY=
+    secure: Iz1pzZA4rNEerZeytj5kLHhuwYVYYn7bFwE4tJrY2rBxs8cz5Tb6tupqlomfSx/4iMwXX9ogr0JCuR/m80Hjct8ptU/cBmGrart6zv4gzHHqr8crNxz+KLE2/dFIq/0+VCPibJthiGWFXDy5r41n4Ex8pYYC3yyo84/Aa1lKLWo=
+    secure: M08EfZWAKwMVf6Hn0CNTb+SMJtECGulC/vRPW7p2ADkzx9qZ3tFvmMQUw6fgO0MxEEwukWDRaeEoB3RsF095j3D8qslkifldsrYcySuCRBaZHl2v9NFAqjvqZWfrgdNX7MI0LGx4jDWIvEjx3RHTXbWxp26Bkx0MeVw8QpsuVwg=
 notifications:
   hipchat:
     rooms:
       secure: TqNWeWCexwfDYni1dFZy8NHdFCdBB9xpD3d/mPFjJj5DoDMuDzJYcsp6t4Iv0ICLCg4SiLLgxg6d22K9EdLvaqVzNNiGG5goYvUiv9pjDyEzSl+usX0ABr7IHB7ukmPPPUWKeQ7IY6bsMkKpb2PRVP82Eq1WFA4zsaGJhrmWAzw=
     format: html
-    template: 'Build <a href="%{build_url}">#%{build_number}</a> for <a href="https://github.com/%{repository}/tree/%{branch}">%{branch}</a> of <a href="https://github.com/%{repository}">%{repository}</a> %{result} in %{duration}. (<a href="%{compare_url}">changes</a>)'
-before_script:
-  - sh travis.sh
-after_success:
-  - bundle exec rake release
-env:
-  global:
-    secure: ddCSImaFoTzT1l3M1jpg2Bd5UD/Q6AHT18aERSwzEb8dK6T16RlWhP56XmJNrE9/5W0EtaYFXaEQQYCNYLO+xVlHEejdHY9oPVB3ODd7l2c2TqT8Nih/87l4cabNqo0JV27i62ZndylBRi8SHwjkjOf08JEIB6hWyJA40WX0u1M=
+    template: Build <a href="%{build_url}">#%{build_number}</a> for <a href="https://github.com/%{repository}/tree/%{branch}">%{branch}</a>
+      of <a href="https://github.com/%{repository}">%{repository}</a> %{result} in
+      %{duration}. (<a href="%{compare_url}">changes</a>)
