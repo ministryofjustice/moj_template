@@ -6,7 +6,7 @@ env:
   global:
   - secure: en4DhQdb3AiG0bP3UJHKnsKR4/vneDTdLkP2lXv0s4vBIXNHr6hoYCTax6/+8kEk6K5V+Zcf9ipOC52AVmtEXcqtWWczYZZhKCHnm3w08e1i/mTkwxUTBvu/+r7FTh+ry9YgK0HYHUYBoSYokUt3clvonMbCd4Mb34IucgminZQ=
   - secure: TjKZ0l1G1KJpioaI4eV3F1J/bwftiHe+qy79k54GVNv8ajvFVx8SrJMV6sKfq4SgawCzip/N4nEs8xKq8OsTdkHNNCokqURa67ARCgS6gL/uLg+DRx6UiYKhNOZZx3agTp9Kze50GNymBYMaK+bU5azCznPp5pBPSsLrcsusCvw=
-  - secure: mDi+dM0gh4ALwLn69060EezDD/sHzfeqWXFc4Zp/t5xpgVGpF4ovgFaoOkGYGwYbOU6hJbARrWbBzwmTIRgwVhfhmbi2xyLFOwuGCe9ywKifoY+YR3FnQ36vu6Og5wsab7Ksi6f5KUwU+SEjwTIYtx09SWnHYgqTnRAMpwhg4rI=
+  - secure: Ad/gLWa38sTYBmiMCCUzKccPceem/v/DgJDWPNPIq0IUB3fooMMfihn6iUEMc7ecrN0Y8BRjvg45zBO7f76vHQ584MUhYVlC4ulBjmkcIptwjFoT15bjFfY6yS/3GwK0e+2eSRQucutxHNI/lS2em8P4A1vsD8/NLb6l55v2xwU=
 notifications:
   hipchat:
     rooms:
