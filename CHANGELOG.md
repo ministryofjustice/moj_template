@@ -2,7 +2,10 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
-#### v0.8.0 (2014-03-06)
+#### v0.9.1 (2014-03-07)
+  * Debug Travis github hook
+
+#### v0.9.0 (2014-03-07)
   * Use Jenkins instead of Travis as CI
   * Auto release to Rubygems and PyPi on successful builds of master
 
