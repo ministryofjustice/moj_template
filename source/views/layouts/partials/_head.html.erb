@@ -11,6 +11,7 @@
 
       ga('create', '<%= config_item :ga_id %>', 'service.gov.uk');
       <%= yield :analytics %>
+      ga('set', 'anonymizeIp', true);
       ga('send', 'pageview');
     </script>
     <% end %>
