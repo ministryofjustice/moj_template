@@ -17,7 +17,6 @@ module Compiler
       header_class: "{% if page.header_class %}{{ page.header_class }}{% endif %}",
       inside_header: "{% include layouts/_inside_header.html %}",
       page_title: "{% include layouts/_page_title.html %}",
-      proposition_header: "{% include layouts/_proposition_header.html %}",
       top_of_page: "{% include layouts/_top_of_page.html %}",
       stylesheets: "{% include layouts/_stylesheets.html %}",
       javascripts: "{% include layouts/_javascripts.html %}"
