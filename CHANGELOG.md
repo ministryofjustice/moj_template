@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.10.2 (2014-03-18)
+  * Fix issue with other language compilers
+
 #### v0.10.1 (2014-03-18)
   * Add phase indicator gutter fix
   * Fix service name header gutter widths
