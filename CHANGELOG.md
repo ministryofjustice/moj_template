@@ -2,6 +2,10 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.10.1 (2014-03-18)
+  * Add phase indicator gutter fix
+  * Fix service name header gutter widths
+
 #### v0.10.0 (2014-03-11)
   * IP addresses in Google Analytics are now anonymized
 
