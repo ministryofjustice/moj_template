@@ -1,0 +1,10 @@
+<% if content_for?(:proposition_header) %>
+          <%= yield(:proposition_header) %>
+        <% else %>
+          <div class="header-proposition">
+            <div class="content">
+                <a href="/" id="proposition-name"><%= "#{config_item(:proposition_title)}" %></a>
+                <a href="https://www.gov.uk/service-manual/phases/#{config_item(:phase).to_s.downcas}.html" class="proposition-phase"><%= "#{config_item(:phase).to_s.capitalize}" %></a>
+            </div>
+          </div>
+        <% end %>

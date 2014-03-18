@@ -1,0 +1,27 @@
+#global-header .header-proposition {
+  @include media(desktop){
+    padding-top: 8px;
+  }
+
+  #proposition-name {
+    line-height: 1em;
+    display: inline-block;
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  body.alpha & .proposition-phase {
+    @include phase-tag(alpha);
+  }
+  body.beta & .proposition-phase {
+    @include phase-tag(beta);
+  }
+  body.alpha & .proposition-phase,
+  body.beta & .proposition-phase {
+    margin-left: 1em;
+    text-decoration: none;
+    position: relative;
+    top: -3px;
+  } 
+}
