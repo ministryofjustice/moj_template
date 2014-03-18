@@ -17,7 +17,6 @@ module Compiler
       header_class: "{{{ headerClass }}}",
       inside_header: "{{{ insideHeader }}}",
       page_title: "{{ pageTitle }}",
-      proposition_header: "{{{ propositionHeader }}}",
       top_of_page: "{{{ topOfPage }}}",
       stylesheets: "{{{ stylesheets }}}",
       javascripts: "{{{ javascripts }}}"

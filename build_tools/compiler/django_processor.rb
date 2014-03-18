@@ -16,7 +16,6 @@ module Compiler
       header_class: "{% if page.header_class %}{{ page.header_class }}{% endif %}",
       inside_header: "{% block inside_header %}{% endblock %}",
       page_title: "{% block page_title %}{% endblock %}",
-      proposition_header: "{% block proposition_header %}{% endblock %}",
       top_of_page: "{% load staticfiles %}{% block top_of_page %}{% endblock %}",
       stylesheets: "{% block stylesheets %}{% endblock %}",
       javascripts: "{% block javascripts %}{% endblock %}"

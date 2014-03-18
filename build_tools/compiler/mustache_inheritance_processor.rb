@@ -17,7 +17,6 @@ module Compiler
       header_class: "{{$headerClass}}{{/headerClass}}",
       inside_header: "{{$insideHeader}}{{/insideHeader}}",
       page_title: "{{$pageTitle}}GOV.UK - The best place to find government services and information{{/pageTitle}}",
-      proposition_header: "{{$propositionHeader}}{{/propositionHeader}}",
       top_of_page: "{{$topOfPage}}{{/topOfPage}}",
       stylesheets: "{{$stylesheets}}{{/stylesheets}}",
       javascripts: "{{$javascripts}}{{/javascripts}}"
