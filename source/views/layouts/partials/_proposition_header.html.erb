@@ -1,0 +1,10 @@
+<% if content_for?(:proposition_header) %>
+          <%= yield(:proposition_header) %>
+        <% else %>
+          <div class="header-proposition">
+            <div class="content">
+                <a href="/" id="proposition-name">{{ proposition_title }}</a>
+                <a href="https://www.gov.uk/service-manual/phases/{{ phase }}.html" class="proposition-phase">{{ phase }}</a>
+            </div>
+          </div>
+        <% end %>
