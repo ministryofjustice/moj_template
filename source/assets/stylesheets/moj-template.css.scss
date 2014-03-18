@@ -9,8 +9,6 @@
 @import "design-patterns/buttons";
 @import "design-patterns/alpha-beta";
 
-// SHAME - files waiting to be removed
-
 // Core MOJ Styles
 @import "moj-core/helpers";
 @import "moj-core/moj-colours";
@@ -23,3 +21,7 @@
 @import "design-patterns/breadcrumb";
 @import "design-patterns/button";
 @import "design-patterns/footer";
+
+
+// SHAME - quick fix issues
+@import "shame";
