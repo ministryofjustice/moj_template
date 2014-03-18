@@ -1,9 +1,11 @@
 #global-header .header-proposition {
   @include media(desktop){
-    padding-top: 5px;
+    padding-top: 8px;
   }
 
   #proposition-name {
+    line-height: 1em;
+    display: inline-block;
     &:hover {
       border-bottom: 1px solid $white;
     }
