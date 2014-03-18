@@ -3,8 +3,8 @@
         <% else %>
           <div class="header-proposition">
             <div class="content">
-                <a href="/" id="proposition-name">{{ proposition_title }}</a>
-                <a href="https://www.gov.uk/service-manual/phases/{{ phase }}.html" class="proposition-phase">{{ phase }}</a>
+                <a href="/" id="proposition-name"><%= "#{config_item(:proposition_title)}" %></a>
+                <a href="https://www.gov.uk/service-manual/phases/#{config_item(:phase).to_s.downcas}.html" class="proposition-phase"><%= "#{config_item(:phase).to_s.capitalize}" %></a>
             </div>
           </div>
         <% end %>
