@@ -48,10 +48,6 @@ module Compiler
     def config_item(key)
     end
 
-    def environment
-      "production"
-    end
-
     def method_missing(name, *args)
       puts "method missing -- #{name} #{args.inspect}"
     end
