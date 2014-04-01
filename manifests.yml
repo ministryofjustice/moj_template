@@ -1,5 +1,5 @@
 ---
-# If you make changes here, be sure to make corresponding changes in lib/govuk_template/engine.rb
+# If you make changes here, be sure to make corresponding changes in lib/moj_template/engine.rb
 stylesheets:
 # Govuk Template assets
 - govuk-template
@@ -11,6 +11,9 @@ stylesheets:
 - fonts-ie8
 # MOJ Template assets
 - moj-template
+- moj-template-ie8
+- moj-template-ie7
+- moj-template-ie6
 javascripts:
 # Govuk Template assets
 - govuk-template

@@ -1,4 +1,7 @@
-<link href="<%= asset_path "moj-template.css" %>" media="screen" rel="stylesheet" type="text/css" />
+<!--[if gt IE 8]><!--><link href="<%= asset_path "moj-template.css" %>" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="<%= asset_path "moj-template-ie6.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="<%= asset_path "moj-template-ie7.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="<%= asset_path "moj-template-ie8.css" %>" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
 
     <%= yield :stylesheets %>
     <%= yield :head %>

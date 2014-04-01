@@ -8,7 +8,7 @@ module MojTemplate
         ie.js
         vendor/goog/webfont-debug.js
 
-        moj-template.css
+        moj-template*.css
         moj.js
         vendor/jquery/jquery-1.11.0.min.js
       )
