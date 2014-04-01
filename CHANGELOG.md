@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.11.0 (2014-04-01)
+  * Remove Google Analytics from head. Add tracking manually at app level from now.
+
 #### v0.10.3 (2014-03-21)
   * Fix error in prop header
 
