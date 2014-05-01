@@ -1,4 +1,6 @@
-Copyright (c) 2014 MOJ Digital Services
+&copy; Crown Copyright Ministry of Justice Digital Services
+
+http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm
 
 MIT License
 
