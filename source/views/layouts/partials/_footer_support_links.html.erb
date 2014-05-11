@@ -1,9 +1,13 @@
 <h2 class="visuallyhidden">Support links</h2>
             <ul>
-              <li><a href="http://www.gov.uk/help">Help</a></li>
-              <li><a href="http://www.gov.uk/help/cookies">Cookies</a></li>
-              <li><a href="http://www.gov.uk/contact">Contact</a></li>
-              <li><a href="http://www.gov.uk/cymraeg">Cymraeg</a></li>
+              <% if content_for?(:footer_support_links_override) %>
+                <%= yield(:footer_support_links_override) %>
+              <% else %>
+                <li><a href="http://www.gov.uk/help">Help</a></li>
+                <li><a href="http://www.gov.uk/help/cookies">Cookies</a></li>
+                <li><a href="http://www.gov.uk/contact">Contact</a></li>
+                <li><a href="http://www.gov.uk/cymraeg">Cymraeg</a></li>
+              <% end %>
               <li>
                 Built by the
                 <a href="https://mojdigital.blog.gov.uk/"><abbr title="Ministry of Justice">MOJ</abbr> Digital Services</a>
