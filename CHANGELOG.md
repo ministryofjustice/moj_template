@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.12.0 (2014-05-13)
+  * Allow support links to be overridden
+
 #### v0.11.1 (2014-04-01)
   * Add IE Stylesheets in conditional comments
 
