@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.14.0 (2014-07-09)
+  * Add yeild for header links
+
 #### v0.13.0 (2014-06-30)
   * Disable 'js-enabled' class for IE6
 
