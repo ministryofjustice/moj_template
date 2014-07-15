@@ -47,7 +47,7 @@
             '\n\nFind out how we\'re making the Ministry Of Justice Digital by Default.'+
             '\nhttps://mojdigital.blog.gov.uk/.'+
             '\n\nGet in touch to see what positions are available and see what projects you could be working on.'+
-            '\nhttps://twitter.com/MOJDigital/statuses/413340917509001216';
+            '\nhttps://mojdigital.blog.gov.uk/working-at-moj-ds/';
       moj.log(m+txt);
     }
   };
