@@ -121,11 +121,9 @@ To generate the tarball, run the `bundle exec rake build:tar` rake task. This wi
 
 ## Publishing
 
-After an accepted contribution (pull request merged into master) you must checkout master and run the following command to publish the current versions:
+After an accepted contribution (pull request merged into master), checkout master, increase the version in `lib/moj_template/version.rb` using [Semantic Versioning](http://semver.org/), update `CHANGELOG.md` with the changes made on that version and push back to the remote. **DO NOT tag the repository manually**.
 
-    bundle exec rake release
-
-This will trigger a build and on success publish the following packages:
+This will trigger a jenkins build and on success it will publish the following packages and tag the remote repository with the new version number:
 
 * [A gem on RubyGems.org](https://rubygems.org/gems/moj_template)
 * [A Django python package](https://pypi.python.org/pypi/django-moj-template)
