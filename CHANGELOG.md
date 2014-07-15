@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.14.2 (2014-07-14)
+  * Correct 'Working at' URL in console message
+
 #### v0.14.1 (2014-07-11)
   * Fix removing js-enabled for IE6 (not greater than 6)
 
