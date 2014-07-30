@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.15.0 (2014-07-30)
+  * Header bar message is now fully customisable
+
 #### v0.14.3 (2014-07-17)
   * Fix js-enabled removal to not target all other browsers
 
