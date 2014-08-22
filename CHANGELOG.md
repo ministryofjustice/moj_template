@@ -2,6 +2,10 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+#### v0.16.0 (2014-08-22)
+  * Removed phase banner markup and styles **Warning:** You will now need to move the phase banner directly into your app
+  * Updated govuk template dependencies to v0.8.1
+
 #### v0.15.0 (2014-07-30)
   * Header bar message is now fully customisable
 
