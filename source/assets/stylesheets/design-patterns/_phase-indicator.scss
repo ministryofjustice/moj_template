@@ -1,8 +1,0 @@
-.indicator{
-  body.alpha & {
-    @include phase-banner(alpha);
-  }
-  body.beta & {
-    @include phase-banner(beta);
-  }
-}

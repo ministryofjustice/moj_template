@@ -10,14 +10,7 @@
 #wrapper {
   background-color: $white;
   padding: 0 0 60px 0;
-  border-bottom: 10px solid $black;
-
-  body.alpha & {
-    border-color: $alpha-colour;
-  }
-  body.beta & {
-    border-color: $beta-colour;
-  }
+  border-bottom: 10px solid $govuk-blue;
 }
 
 .inner {

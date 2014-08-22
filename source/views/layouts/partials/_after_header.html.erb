@@ -1,19 +1,2 @@
 <!--[if lte IE 6]><script>document.body.className = document.body.className.replace('js-enabled','');</script><![endif]-->
-    <div class="indicator cf">
-      <% if content_for?(:feedback_link_override) %>
-        <%= yield(:feedback_link_override) %>
-      <% else %>
-        <p>
-          <strong><%= config_item(:phase).to_s.capitalize %>:</strong>
-          This is a new service -
-          <% if content_for?(:feedback_link) %>
-            <%= yield(:feedback_link) %>
-          <% else %>
-            <a href="<%= "#{config_item(:feedback_url)}" %>">your feedback</a>
-          <% end %>
-          will help us to improve it
-        </p>
-      <% end %>
-    </div>
-
     <%= yield :after_header %>
