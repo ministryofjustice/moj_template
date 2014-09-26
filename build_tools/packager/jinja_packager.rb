@@ -2,15 +2,15 @@ require 'open3'
 require 'fileutils'
 require 'moj_template/version'
 require_relative 'tar_packager'
-require_relative '../compiler/django_processor'
+require_relative '../compiler/jinja_processor'
 
 module Packager
-  PY_PACKAGE_NAME = 'django-moj-template'
+  PY_PACKAGE_NAME = 'jinja-moj-template'
 
-  class DjangoPackager < TarPackager
+  class JinjaPackager < TarPackager
     def initialize
       super
-      @base_name = "django_moj_template-#{MojTemplate::VERSION}"
+      @base_name = "jinja_moj_template-#{MojTemplate::VERSION}"
     end
 
     def build
@@ -28,7 +28,7 @@ module Packager
       target_dir = @target_dir.join(File.dirname(file))
       target_dir.mkpath
       File.open(target_dir.join(generated_file_name(file)), 'wb') do |f|
-        f.write Compiler::DjangoProcessor.new(file).process
+        f.write Compiler::JinjaProcessor.new(file).process
       end
     end
 
@@ -55,7 +55,7 @@ module Packager
 
     def generated_file_name(file_path)
       if file_path.include? "moj_template"
-        "base.html"
+        "base.jinja"
       else
         File.basename(file_path, File.extname(file_path))
       end
