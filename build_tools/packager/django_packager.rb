@@ -5,8 +5,6 @@ require_relative 'tar_packager'
 require_relative '../compiler/django_processor'
 
 module Packager
-  PY_PACKAGE_NAME = 'django-moj-template'
-
   class DjangoPackager < TarPackager
     def initialize
       super
