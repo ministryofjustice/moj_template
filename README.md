@@ -21,6 +21,7 @@ At present this generates 5 output formats:
 4. [a tarball containing Mustache Inheritance templates](#mustache-inheritance-version)
 5. [a tarball](#tarball-version)
 6. [a django python package](#django-version)
+6. [a Jinja python package](#jinja-version)
 
 ### Gem version
 
@@ -96,6 +97,24 @@ Create a new file called `{app_path}/context_processors.py` with the following c
 Then add the following to your `TEMPLATE_CONTEXT_PROCESSORS` in `settings.py`:
 
     "{app_path}.context_processors.globals"
+
+### Jinja version
+
+Similarly to Django instructions include the package in `requirements.txt`:
+
+    jinja-moj-template==0.17.0
+
+Add `moj_template` to your `INSTALLED_APPS` in `settings.py` file:
+
+    INSTALLED_APPS = (
+      ...
+      'moj_template',
+      ...
+    )
+Extend from Jinja base template:
+
+    {% extends 'moj_template/base.jinja' %}
+
 
 ### Play version
 

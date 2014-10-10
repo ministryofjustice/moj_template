@@ -11,7 +11,7 @@ task :compile do
 end
 
 desc "Build all versions"
-task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid", "build:django"]
+task :build => ["build:gem", "build:tar", "build:play", "build:mustache", "build:mustache_inheritance", "build:liquid", "build:django", "build:jinja"]
 
 namespace :build do
   desc "Build moj_template-#{MojTemplate::VERSION}.gem into the pkg directory"
@@ -61,6 +61,13 @@ namespace :build do
     puts "Building ./pkg/django_moj_template-#{MojTemplate::VERSION}"
     require 'packager/django_packager'
     Packager::DjangoPackager.build
+  end
+
+  desc "Build jinja_moj_template-#{MojTemplate::VERSION} into the pkg directory"
+  task :jinja => :compile do
+    puts "Building ./pkg/jinja_moj_template-#{MojTemplate::VERSION}"
+    require 'packager/jinja_packager'
+    Packager::JinjaPackager.build
   end
 end
 
