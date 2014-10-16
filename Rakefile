@@ -93,6 +93,16 @@ task :release => :build do
     puts "Done."
   end
 
+  require 'publisher/django_publisher'
+  q = Publisher::JinjaPublisher.new
+  if q.version_released?
+    puts "jinja_moj_template-#{MojTemplate::VERSION} already released. Not pushing."
+  else
+    puts "Publishing jinja_moj_template-#{MojTemplate::VERSION}..."
+    q.publish
+    puts "Done."
+  end
+
 #   require 'publisher/play_publisher'
 #   q = Publisher::PlayPublisher.new
 #   if q.version_released?

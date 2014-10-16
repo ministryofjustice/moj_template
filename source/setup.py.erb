@@ -4,7 +4,7 @@ import os
 from setuptools import setup, find_packages
 
 sdict = dict(
-  name = '<%=Packager::PY_PACKAGE_NAME%>',
+  name = '<%=@base_name.gsub(/([a-z]+)_([a-z]+)_([a-z]+).*/, '\1-\2-\3')%>',
   packages = find_packages(),
   version = '<%=MojTemplate::VERSION%>',
   description = 'MOJ Template',

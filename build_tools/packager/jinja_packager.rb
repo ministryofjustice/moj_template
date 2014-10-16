@@ -5,8 +5,6 @@ require_relative 'tar_packager'
 require_relative '../compiler/jinja_processor'
 
 module Packager
-  PY_PACKAGE_NAME = 'jinja-moj-template'
-
   class JinjaPackager < TarPackager
     def initialize
       super
