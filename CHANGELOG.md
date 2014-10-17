@@ -2,7 +2,10 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
-#### v0.17.1 (2014-10-16)
+### v0.17.2 (2014-10-17)
+  * Fix build (require correct library)
+
+### v0.17.1 (2014-10-16)
   * Hotfix to run either flavour of Python template
 
 #### v0.17.0 (2014-10-10)
