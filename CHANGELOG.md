@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.18.0 (2014-10-21)
+  * Remove default footer links for django
+
 ### v0.17.2 (2014-10-17)
   * Fix build (require correct library)
 
