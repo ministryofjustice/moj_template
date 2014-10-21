@@ -1,6 +1,13 @@
 <h2 class="visuallyhidden">Support links</h2>
             <ul>
+            <% if content_for?(:footer_support_links) %>
               <%= yield(:footer_support_links) %>
+            <% else %>
+              <li><a href="http://www.gov.uk/help">Help</a></li>
+              <li><a href="http://www.gov.uk/help/cookies">Cookies</a></li>
+              <li><a href="http://www.gov.uk/contact">Contact</a></li>
+              <li><a href="http://www.gov.uk/cymraeg">Cymraeg</a></li>
+            <% end %>
               <li>
                 Built by
                 <a href="https://mojdigital.blog.gov.uk/"><abbr title="Ministry of Justice">MOJ</abbr> Digital Services</a>
