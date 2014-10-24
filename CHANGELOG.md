@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.19.0 (2014-10-24)
+  * Remove phase tag from proposition header inline with GDS recommendations
+
 ### v0.18.0 (2014-10-21)
   * Remove default footer links for django
 
