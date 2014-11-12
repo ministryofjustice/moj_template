@@ -55,6 +55,8 @@ In order for these files to work, you will need to set a number of variables in 
     config.feedback_url = ''
     # Google Analytics ID (Tracking ID for the service)
     config.ga_id = ''
+    # Include jQuery in template
+    config.jquery = true
 
 ### Django version
 
