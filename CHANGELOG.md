@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.20.0 (2014-11-19)
+  * Allow apps to determine IE version for JavaScript
+
 ### v0.19.0 (2014-10-24)
   * Remove phase tag from proposition header inline with GDS recommendations
 
