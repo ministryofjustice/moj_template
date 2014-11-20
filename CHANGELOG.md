@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.21.0 (2014-11-20)
+  * Set IE version for JS at template level rather than app config
+
 ### v0.20.0 (2014-11-19)
   * Allow apps to determine IE version for JavaScript
 
