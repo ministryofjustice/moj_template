@@ -53,8 +53,6 @@ In order for these files to work, you will need to set a number of variables in 
     config.product_type = ''
     # Feedback URL (URL for feedback link in phase banner)
     config.feedback_url = ''
-    # Supply JavaScript to IE greater than version specified
-    config.js_gt_ie = 6
     # Google Analytics ID (Tracking ID for the service)
     config.ga_id = ''
 
