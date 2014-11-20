@@ -1,4 +1,4 @@
-<!--[if gt IE <%= config_item(:js_gt_ie) %>]><!-->
+<!--[if gt IE <%= yield :js_gt_ie %>]><!-->
     <script src="<%= asset_path "vendor/jquery/jquery-1.11.0.min.js" %>" type="text/javascript"></script>
     <script src="<%= asset_path "moj.js" %>" type="text/javascript"></script>
 
