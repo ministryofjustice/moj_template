@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.22.0 (2014-11-20)
+  * Make "Cymraeg" to be read as if it were actually welsh
+
 ### v0.21.0 (2014-11-20)
   * Set IE version for JS at template level rather than app config
 
