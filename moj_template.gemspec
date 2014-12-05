@@ -24,8 +24,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'sprockets', '2.10.0'
   s.add_development_dependency 'sass', '3.2.9'
-  s.add_development_dependency 'govuk_template', '0.8.1'
-  s.add_development_dependency 'govuk_frontend_toolkit', '0.43.2'
+  s.add_development_dependency 'govuk_template', '0.11.0'
+  s.add_development_dependency 'govuk_frontend_toolkit', '3.1.0'
   s.add_development_dependency 'gem_publisher', '1.3.1'
   s.add_development_dependency 'rspec', '2.14.1'
 end
