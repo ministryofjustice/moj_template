@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.23.0 (2014-12-05)
+  * Update dependencies to latest [govuk_template](https://github.com/alphagov/govuk_template/tree/v0.11.0) (0.11.0) and [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit_gem/tree/v3.1.0) (3.1.0)
+
 ### v0.22.0 (2014-11-20)
   * Make "Cymraeg" to be read as if it were actually welsh
 
