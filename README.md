@@ -27,7 +27,7 @@ At present this generates 5 output formats:
 
 The gem is available on [rubygems.org](https://rubygems.org/gems/moj_template). To use it, add this line to your application's Gemfile (change the tag to the version you would like to use):
 
-    gem 'moj_template', '~> 0.1.0'
+    gem 'moj_template', '0.23.0'
 
 And then execute:
 
