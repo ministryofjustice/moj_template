@@ -6,9 +6,6 @@
   #proposition-name {
     line-height: 1em;
     display: inline-block;
-    &:hover {
-      border-bottom: 1px solid $white;
-    }
   }
 
   body.alpha & .proposition-phase {
@@ -23,5 +20,5 @@
     text-decoration: none;
     position: relative;
     top: -3px;
-  } 
+  }
 }
