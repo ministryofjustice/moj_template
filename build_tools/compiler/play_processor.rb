@@ -38,6 +38,8 @@ module Compiler
         "@footerTop"
       when :footer_support_links
         "@footerLinks"
+      when :js_gt_ie
+        "@js_gt_ie.getOrElse(\"5\")"
       else
         ""
       end

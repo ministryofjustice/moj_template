@@ -18,7 +18,8 @@ module Compiler
       page_title: "{% block page_title %}{% endblock %}",
       top_of_page: "{% block top_of_page %}{% endblock %}",
       stylesheets: "{% block stylesheets %}{% endblock %}",
-      javascripts: "{% block javascripts %}{% endblock %}"
+      javascripts: "{% block javascripts %}{% endblock %}",
+      js_gt_ie: "{% block js_gt_ie %}5{% endblock %}"
     }
 
     def handle_yield(section = :layout)

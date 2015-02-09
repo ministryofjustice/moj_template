@@ -19,7 +19,8 @@ module Compiler
       page_title: "{% include layouts/_page_title.html %}",
       top_of_page: "{% include layouts/_top_of_page.html %}",
       stylesheets: "{% include layouts/_stylesheets.html %}",
-      javascripts: "{% include layouts/_javascripts.html %}"
+      javascripts: "{% include layouts/_javascripts.html %}",
+      js_gt_ie: "{{ js_gt_ie }}"
     }
 
     def handle_yield(section = :layout)
