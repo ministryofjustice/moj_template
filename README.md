@@ -165,4 +165,3 @@ To make use of any modules from the `modules/` folder, include the required modu
 
     //= require modules/moj.tabs.js
 
-For **documentation on Modules**, see the [wiki pages](https://github.com/ministryofjustice/moj_template/wiki).
