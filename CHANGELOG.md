@@ -2,6 +2,11 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.23.1 (2015-02-09)
+  * Fix js_gt_ie template block was not being rendered in all the different
+templates compilers (by default JavaScript is loaded for IE6 and better).
+  * Minor fix to README.
+
 ### v0.23.0 (2014-12-05)
   * Update dependencies to latest [govuk_template](https://github.com/alphagov/govuk_template/tree/v0.11.0) (0.11.0) and [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit_gem/tree/v3.1.0) (3.1.0)
 
