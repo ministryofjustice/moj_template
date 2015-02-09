@@ -19,7 +19,8 @@ module Compiler
       page_title: "{{$pageTitle}}GOV.UK - The best place to find government services and information{{/pageTitle}}",
       top_of_page: "{{$topOfPage}}{{/topOfPage}}",
       stylesheets: "{{$stylesheets}}{{/stylesheets}}",
-      javascripts: "{{$javascripts}}{{/javascripts}}"
+      javascripts: "{{$javascripts}}{{/javascripts}}",
+      js_gt_ie: "{{$js_gt_ie}}5{{/js_gt_ie}}"
     }
 
     def handle_yield(section = :layout)

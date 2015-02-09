@@ -19,7 +19,8 @@ module Compiler
       page_title: "{{ pageTitle }}",
       top_of_page: "{{{ topOfPage }}}",
       stylesheets: "{{{ stylesheets }}}",
-      javascripts: "{{{ javascripts }}}"
+      javascripts: "{{{ javascripts }}}",
+      js_gt_ie: "{{{ js_gt_ie }}}"
     }
 
     def handle_yield(section)
