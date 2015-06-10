@@ -25,5 +25,4 @@ Then include the following in a new file called `apps/core/context_processors.py
         'phase': '', # Current Phase (Sets the current phase and the colour of phase tags). Presumed values: alpha, beta, live
         'product_type': '', # Product Type (Adds class to body based on service type). Presumed values: information, service
         'feedback_url': '', # Feedback URL (URL for feedback link in phase banner)
-        'ga_id': '' # Google Analytics ID (Tracking ID for the service)
       }

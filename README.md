@@ -53,8 +53,6 @@ In order for these files to work, you will need to set a number of variables in 
     config.product_type = ''
     # Feedback URL (URL for feedback link in phase banner)
     config.feedback_url = ''
-    # Google Analytics ID (Tracking ID for the service)
-    config.ga_id = ''
 
 ### Django version
 
@@ -91,7 +89,6 @@ Create a new file called `{app_path}/context_processors.py` with the following c
         'phase': '', # Current Phase (Sets the current phase and the colour of phase tags). Presumed values: alpha, beta, live
         'product_type': '', # Product Type (Adds class to body based on service type). Presumed values: information, service
         'feedback_url': '', # Feedback URL (URL for feedback link in phase banner)
-        'ga_id': '' # Google Analytics ID (Tracking ID for the service)
       }
 
 Then add the following to your `TEMPLATE_CONTEXT_PROCESSORS` in `settings.py`:
