@@ -2,6 +2,9 @@
 
 A list of basic changes associated with each version. Versions are updated using the [Semantic Versioning](http://semver.org/) system.
 
+### v0.23.2 (2015-06-10)
+  * Remove misleading config variables from documentation.
+
 ### v0.23.1 (2015-02-09)
   * Fix js_gt_ie template block was not being rendered in all the different
 templates compilers (by default JavaScript is loaded for IE6 and better).
