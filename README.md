@@ -1,3 +1,5 @@
+# This repository is no longer in use. Please use [govuk_template](https://github.com/alphagov/govuk_template) instead
+
 # Ministry of Justice Template
 
 
